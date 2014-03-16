@@ -23,10 +23,6 @@ if (cluster.isMaster) {
 
 } else {
 
-    var options = {
-        key: fs.readFileSync('./private/key.pem'),
-        cert: fs.readFileSync('./private/cert.pem')
-    };
     app.set('port', process.env.PORT || 4000);
     app.set('views', __dirname + '/app/views');
     app.set('view engine', 'jade');
