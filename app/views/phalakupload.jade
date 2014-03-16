@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+html
+    head
+        meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+        title
+            | फलक लेखन
+        meta(name="viewport", content="width=device-width")
+        link(rel="stylesheet", href="../assets/css/bootstrap.css")
+        link(rel="stylesheet", href="../assets/css/main.css")
+        link(rel="stylesheet", href=)
+        script(src="../assets/js/jquery-1.11.0.js")
+        script(src="../assets/js/bootstrap.js")
+        script(src="../assets/js/main.js")
+body
+    div(class="container-full")
+        div(class="navbar navbar-default")
+            div(class="navbar-header")
+                a(class="navbar-brand" href="/")
+                    | मुख्य पान
+                a(class="navbar-brand" href="/category/vyaki")
+                    | व्यक्तिविषयक
+                a(class="navbar-brand" href="/category/dinvishesh")
+                    | दिनविशेष
+                a(class="navbar-brand" href="/category/kodi")
+                    | कोडी
+                a(class="navbar-brand" href="/category/lalit")
+                    | ललित
+        div(class="container")
+            div(class="row")
+                form(action="/phalak-upload", method="POST", enctype="multipart/form-data")
+                    section(class="body")
+                        ul(class="details col-md-12")
+                            li
+                                label(for="") शीर्षक
+                                input(id="title", type="text", class="form-control", maxlength="64", name="title", value="")
+
+                            li
+                                label(for="") प्रकार
+                                select(id="category", type="text", class="form-control", name="category")
+                                    option(value="vyakti")  व्यक्तिविषयक
+                                    option(value="dinavishesh")   दिनविशेष
+                                    option(value="kodi")  कोडी
+                                    option(value="lalit")    ललित
+
+                            li
+                                label(for="") फोटो
+                                input(id="displayImage", type="file", class="form-control", name="displayImage")
+
+
+                        button(id="save-button", class="btn btn-primary")
+                            | Save

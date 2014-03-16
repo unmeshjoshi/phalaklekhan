@@ -1,0 +1,5 @@
+{
+    "invalid_query" : "Please enter a valid query!",
+    "invalid_character":"Invalid character error",
+    "no_results":"No contacts matching this query!"
+}

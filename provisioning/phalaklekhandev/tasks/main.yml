@@ -1,0 +1,2 @@
+- include: redis-server.yml tags=redis-server
+- include: node.yml tags=node

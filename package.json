@@ -1,0 +1,34 @@
+{
+    "name": "phalaklekhan",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app.js",
+        "preinstall": "npm i -g grunt-cli mocha"
+    },
+    "dependencies": {
+        "express": "*",
+        "expressmvp": "*",
+        "grunt-cli": "*",
+        "mocha": "*",
+        "jasmine-node": "*",
+        "jade": "*",
+        "escape-html": "*",
+        "winston": "~0.7.1",
+        "remedial": "~1.0.7",
+        "connect-redis": "*",
+        "cluster": "*",
+        "node.extend": "*",
+        "nedb": "*"
+    },
+
+    "description": "",
+    "main": "app.js",
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-mocha-test": "*",
+        "rpm": "0.0.0"
+    },
+    "author": "",
+    "license": ""
+}

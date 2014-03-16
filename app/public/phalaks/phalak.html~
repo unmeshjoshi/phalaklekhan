@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <script src="../assets/js/jquery-1.11.0.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container-full">
+      <div class="navbar navbar-default">
+         <div class="navbar-header">
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li class="divider-vertical"></li>
+          <li><a href="#">More</a></li>
+          <li><a href="#">Options</a></li>
+        </ul>
+      </div>
+
+      <div class="container">	
+      <div class="row">
+        <div class="col-lg-30">
+		<img style="width: 100%; auto;padding-bottom:12%;margin:0 auto" src="JardKetakiDimakhAisa.JPG" >	
+        </div>
+      </div>
+      </div>
+</div> <!-- /container full -->
+</body>
+</html>
+

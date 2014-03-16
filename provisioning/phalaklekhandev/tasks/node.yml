@@ -1,0 +1,23 @@
+---
+- name: Install nodejs
+  action: yum name={{ item }} state=present
+  with_items:
+        - nodejs
+        - npm
+  sudo: yes
+
+- name: Install dev packages required by LDAP node module
+  action: yum name={{item}} state=present
+  with_items:
+      - openldap-devel
+      - libuuid-devel
+      - libxml2-devel
+  sudo: yes
+
+- name: Create appuser
+  user: name=appuser state=present password={{ appuser_password }}
+  sudo: yes
+
+- name: Create Directory /usr/local/app/
+  file: path=/usr/local/app state=directory owner=appuser group=appuser   
+  sudo: yes

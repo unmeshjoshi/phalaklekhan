@@ -1,0 +1,13 @@
+:uat:
+  url: https://preview.contacts.thoughtworks.com/
+
+  User:
+    - mytw
+    - Th0ughtW0rks@2013
+
+:local:
+  url: https://192.168.33.11:4000
+
+  User:
+    - mytw
+    - Th0ughtW0rks@2013

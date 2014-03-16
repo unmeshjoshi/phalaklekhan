@@ -1,0 +1,2 @@
+ manage-backend-server.pl -s hac start
+javatr.sh  com.tripadvisor.hac.test.SingleMetaTest 1584945 --country 293860 --server localhost:10023

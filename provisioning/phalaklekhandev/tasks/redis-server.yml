@@ -1,0 +1,15 @@
+---
+- name: Install redis-server packages
+  action: yum name={{ item }} state=present
+  with_items:
+        - libselinux-python
+        - redis
+  sudo: yes
+        
+- name: Configure redis server
+  copy: src=redis.conf dest=/etc/redis.conf owner=root group=root mode=0664 backup=yes
+  notify:
+        - restart redis
+  sudo: yes
+
+- meta: flush_handlers

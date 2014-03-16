@@ -1,0 +1,15 @@
+---
+- hosts: phalaklekhandev
+  user: vagrant
+  roles:
+     - phalaklekhandev
+
+- hosts: uat
+  user: user
+  roles:
+     - phalaklekhandev
+
+- hosts: localhost
+  user: go
+  roles:
+     - phalaklekhandev
