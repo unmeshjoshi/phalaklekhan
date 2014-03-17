@@ -12,7 +12,7 @@ html
         script(src="../assets/js/bootstrap.js")
         script(src="../assets/js/main.js")
 
-body
+body(style="background-image:url('../assets/img/background.jpg')")
     div(class="container-full")
         div(class="navbar navbar-default")
             div(class="navbar-header")
@@ -29,7 +29,7 @@ body
                 a(class="navbar-brand" href="/category/lalit")
                     | ललित
 
-        div(class="container-fluid" style="background-image:url('../assets/img/background.jpg')")
+        div(class="container-fluid")
             div(class="col-md-12 text-center")
                 h1()
                     | क्षणचित्रे
@@ -44,7 +44,7 @@ body
 
                                     div(class="col-xs-3")
                                         a(href="/phalak/#{doc.image.substring(0, doc.image.indexOf('.'))}")
-                                            img(src="../#{doc.image}",  class="img-thumbnail")
+                                            img(src="http://d1tgx4h3dmbyi5.cloudfront.net/#{doc.image}",  class="img-thumbnail")
 
 
 

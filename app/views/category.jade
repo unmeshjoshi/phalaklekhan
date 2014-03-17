@@ -11,7 +11,7 @@ html
         script(src="../assets/js/jquery-1.11.0.js")
         script(src="../assets/js/bootstrap.js")
         script(src="../assets/js/main.js")
-body
+body(style="background-image:url('../assets/img/background.jpg')")
     div(class="container-full")
         div(class="navbar navbar-default")
             div(class="navbar-header")
@@ -34,4 +34,4 @@ body
                     div
                        - each doc in docArray
                            a(href="/phalak/#{doc.image.substring(0, doc.image.indexOf('.'))}")
-                               img(src="../#{doc.image}",  class="img-thumbnail", style="width: 10%")
+                               img(src="http://d1tgx4h3dmbyi5.cloudfront.net/#{doc.image}",  class="img-thumbnail", style="width: 10%")
