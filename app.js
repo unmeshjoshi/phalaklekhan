@@ -7,7 +7,7 @@ var settings = req('app/config').config;
 
 app = express();
 var cluster = exports.cluster = require('cluster');
-var numCPUs = require('os').cpus().length - 2;
+var numCPUs = require('os').cpus().length;
 var logger = req('lib/logger')();
 var expmvp = require('expressmvp');
 

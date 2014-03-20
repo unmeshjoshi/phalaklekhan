@@ -1,33 +1,7 @@
-<!DOCTYPE HTML>
-html
-    head
-        meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-        title
-            | फलक लेखन
-        meta(name="viewport", content="width=device-width")
-        link(rel="stylesheet", href="../assets/css/bootstrap.css")
-        link(rel="stylesheet", href="../assets/css/main.css")
-        link(rel="stylesheet", href=)
-        script(src="../assets/js/jquery-1.11.0.js")
-        script(src="../assets/js/bootstrap.js")
-        script(src="../assets/js/main.js")
-body(style="background-image:url('../assets/img/background.jpg')")
-    div(class="container-full")
-        div(class="navbar navbar-default")
-            div(class="navbar-header")
-                a(class="navbar-brand" href="/")
-                    | मुख्य पान
-                a(class="navbar-brand" href="/category/vyakti")
-                    | व्यक्तिविषयक
-                a(class="navbar-brand" href="/category/vaishishtyapurna")
-                    | वैशिष्ट्यपूर्ण
-                    a(class="navbar-brand" href="/category/dinvishesh")
-                        | दिनविशेष
-                a(class="navbar-brand" href="/category/kodi")
-                    | कोडी
-                a(class="navbar-brand" href="/category/lalit")
-                    | ललित
-
+extends layout
+block content
+    body(style="background-image:url('../assets/img/background.jpg')")
+        include navbar
         div(class="container")
             div(class="row" style="background-image:'/board.jpg'")
                 div(class="row")
