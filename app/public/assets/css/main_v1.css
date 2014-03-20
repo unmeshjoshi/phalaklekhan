@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Noto Sans Devanagari';
+    font-style: normal;
+    font-weight: 700;
+    src: url('NotoSansDevanagari-Bold.eot');
+    src: url('NotoSansDevanagari-Bold.eot?#iefix') format('embedded-opentype'),
+    url('NotoSansDevanagari-Bold.woff2') format('woff2'),
+    url('NotoSansDevanagari-Bold.woff') format('woff'),
+    url('NotoSansDevanagari-Bold.ttf') format('truetype');
+    url('NotoSansDevanagari-Bold.svg#NotoSansDevanagari-Bold') format('svg');
+}
+@font-face {
+    font-family: 'Noto Sans Devanagari';
+    font-style: normal;
+    font-weight: 400;
+    src: url('NotoSansDevanagari-Regular.eot');
+    src: url('NotoSansDevanagari-Regular.eot?#iefix') format('embedded-opentype'),
+    url('NotoSansDevanagari-Regular.woff2') format('woff2'),
+    url('NotoSansDevanagari-Regular.woff') format('woff'),
+    url('NotoSansDevanagari-Regular.ttf') format('truetype');
+    url('NotoSansDevanagari-Regular.svg#NotoSansDevanagari') format('svg');
+}
+
+body{
+    font-family: 'Noto Sans Devanagari', serif !important;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #333;
+    background-color: #f2f2f2
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Noto Sans Devanagari", serif !important;
+    color: #333;
+}
