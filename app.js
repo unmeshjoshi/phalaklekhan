@@ -8,9 +8,6 @@ var settings = req('app/config').config;
 app = express();
 var cluster = exports.cluster = require('cluster');
 var numCPUs = require('os').cpus().length - 2;
-
-console.log("Number of CPUS is "  + numCPUs);
-
 var logger = req('lib/logger')();
 var expmvp = require('expressmvp');
 

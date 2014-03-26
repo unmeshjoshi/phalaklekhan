@@ -22,17 +22,3 @@ presenter.show = function (req, res) {
         res.render('category', {category: arrays })
     });
 }
-
-function splitArray(a, seps) {
-    var i, res = new Array(), parts = new Array();
-    for (i = 0; i < a.length; i++) {
-        if (i % 4 == 0) {
-            res.push(parts);
-            parts = [];
-        } else {
-            parts.push(a[i]);
-        }
-    }
-    res.push(parts);
-    return res;
-}
