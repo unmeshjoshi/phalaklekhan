@@ -1,29 +1,23 @@
 extends layout
 
 block content
-    body(style="background-image:url('http://d1tgx4h3dmbyi5.cloudfront.net/background.jpg')")
-        div(class="container-full")
-            include navbar
-            div(class="container-fluid", style="margin-top:10%")
-                div(class="col-md-12 text-center")
-                    h1(style="color: #E7E7E7;")
-                        | क्षणचित्रे
-                div(class="col-md-8 col-md-offset-2")
-                    div(class="carousel slide" id="myCarousel")
-                        div(class="carousel-inner")
-                            - each doc, index in docs
-                                if index == 0
-                                    div(class="item active")
-                                else
-                                    div(class="item")
+    div(class="container-fluid", style="margin-top:10%")
+        div(class="col-md-10 col-md-offset-1")
+            div(class="carousel slide" id="myCarousel")
+                div(class="carousel-inner")
+                    - each doc, index in docs
+                        if index == 0
+                            div(class="item active")
+                        else
+                            div(class="item")
 
-                                        div(class="col-xs-3")
-                                            a(href="/phalak/#{doc.image.substring(0, doc.image.indexOf('.'))}")
-                                                img(src="http://d1tgx4h3dmbyi5.cloudfront.net/#{doc.image}",  class="img-thumbnail")
+                                div(class="col-xs-3")
+                                    a(href="/phalak/#{doc.image.substring(0, doc.image.indexOf('.'))}")
+                                        img(src="http://d1tgx4h3dmbyi5.cloudfront.net/#{doc.image}",  class="img-thumbnail")
 
 
 
-                    a(class="left carousel-control" href="#myCarousel" data-slide="prev")
-                        i(class="glyphicon glyphicon-chevron-left")
-                    a(class="right carousel-control" href="#myCarousel" data-slide="next")
-                        i(class="glyphicon glyphicon-chevron-right")
+            a(class="left carousel-control" href="#myCarousel" data-slide="prev")
+                i(class="glyphicon glyphicon-chevron-left")
+            a(class="right carousel-control" href="#myCarousel" data-slide="next")
+                i(class="glyphicon glyphicon-chevron-right")

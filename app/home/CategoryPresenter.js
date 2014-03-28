@@ -22,3 +22,20 @@ presenter.show = function (req, res) {
         res.render('category', {category: arrays })
     });
 }
+
+function splitArray(a) {
+    var i, res = new Array(), parts = new Array();
+    var j = 0;
+    for (i = 0; i < a.length; i++) {
+        if (j == 4) {
+            res.push(parts);
+            parts = [];
+            j = 0;
+        } else {
+            parts.push(a[i]);
+            j++;
+        }
+    }
+    res.push(parts);
+    return res;
+}

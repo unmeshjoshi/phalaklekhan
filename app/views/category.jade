@@ -1,16 +1,10 @@
 extends layout
 block content
-    body(style="background-image:url('../assets/img/background.jpg')")
-        div(class="container-full")
-
-            include navbar
-
-            div(class="col-md-12 col-md-offset-3")
-                div(class="row")
-                    div
-                        h1(style="color: #E7E7E7;") व्यक्तीविषयक फलक
-                    - each docArray in category
-                        div(style="margin-top:1%")
-                            - each doc in docArray
-                                a(href="/phalak/#{doc.image.substring(0, doc.image.indexOf('.'))}", style="margin:0.5%;")
-                                    img(src="http://d1tgx4h3dmbyi5.cloudfront.net/#{doc.image}", style="width: 10%;")
+    div(class="col-md-12 col-md-offset-3")
+        div(class="row")
+            div
+            - each docArray in category
+                div(style="margin-top:1%")
+                    - each doc in docArray
+                        a(href="/phalak/#{doc.image.substring(0, doc.image.indexOf('.'))}", style="margin:0.5%;")
+                            img(src="http://d1tgx4h3dmbyi5.cloudfront.net/#{doc.image}", style="width: 12%;")
