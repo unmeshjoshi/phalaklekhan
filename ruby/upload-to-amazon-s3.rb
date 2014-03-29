@@ -30,8 +30,8 @@ end
 
 def s3
   s3 = AWS::S3.new(
-      :access_key_id => 'AKIAJHTXVWCL6FQVYCDQ',
-      :secret_access_key => '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',
+      :access_key_id => '',
+      :secret_access_key => '',
       :ec2_endpoint => 'ec2.us-west-2.amazonaws.com',
       :s3_endpoint => 's3-us-west-2.amazonaws.com'
   )
