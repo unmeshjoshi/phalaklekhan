@@ -12,8 +12,8 @@ block content
                             div(class="item")
 
                                 div(class="col-xs-3")
-                                    a(href="/phalak/#{doc.image.substring(0, doc.image.indexOf('.'))}")
-                                        img(src="http://d1tgx4h3dmbyi5.cloudfront.net/#{doc.image}",  class="img-thumbnail")
+                                    a(href="/phalak/#{doc.name.substring(0, doc.name.indexOf('.'))}")
+                                        img(src="#{doc.url.replace('upload', 'upload/c_limit,h_470,w_335')}",class="img-thumbnail")
 
 
 

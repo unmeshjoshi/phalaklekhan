@@ -6,11 +6,11 @@ presenter.uri = '/category/:category';
 
 function getExpirationTime() {
     var date = new Date();
-    date.setSeconds(date.getSeconds() + 600);
+    date.setSeconds(date.getSeconds() + 3600);
     return date;
 }
 presenter.cache_headers = {
-    'Cache-Control': 'public, max-age=600',
+    'Cache-Control': 'public, max-age=3600',
     'Expires': getExpirationTime()
 };
 

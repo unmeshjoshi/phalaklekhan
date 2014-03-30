@@ -6,5 +6,5 @@ block content
             - each docArray in category
                 div(style="margin-top:1%")
                     - each doc in docArray
-                        a(href="/phalak/#{doc.image.substring(0, doc.image.indexOf('.'))}", style="margin:0.5%;")
-                            img(src="http://d1tgx4h3dmbyi5.cloudfront.net/#{doc.image}", style="width: 12%;")
+                        a(href="/phalak/#{doc.name.substring(0, doc.name.indexOf('.'))}", style="margin:0.5%;")
+                            img(src="#{doc.url.replace('upload', 'upload/c_limit,h_308,w_228')}", style="width: 12%;")
