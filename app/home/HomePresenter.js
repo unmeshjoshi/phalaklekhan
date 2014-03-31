@@ -5,11 +5,11 @@ presenter.uri = '/';
 
 function getExpirationTime() {
     var date = new Date();
-    date.setSeconds(date.getSeconds() + 3600);
+    date.setSeconds(date.getSeconds() + 7200);
     return date;
 }
 presenter.cache_headers = {
-    'Cache-Control':'public, max-age=3600',
+    'Cache-Control':'public, max-age=7200',
     'Expires':getExpirationTime()
 };
 
