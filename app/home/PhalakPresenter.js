@@ -17,6 +17,11 @@ presenter.cache_headers = {
 presenter.show = function (req, res) {
     var name = req.param('name') + ".JPG";
     db.find({ name: name }, function (err, docs) {
+        if (docs.length == 0) {
+            res.status(404);
+            res.type('txt').send('Not found');
+            return;
+        }
         res.render('phalak', {doc:docs[0]})
     });
 }

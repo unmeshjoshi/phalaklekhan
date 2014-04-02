@@ -18,24 +18,22 @@ presenter.show = function (req, res) {
     var category = req.param('category');
     console.log("category is " + category)
     db.find({ category: category }, function (err, docs) {
+        if (docs.length == 0) {
+            res.status(404);
+            res.type('txt').send('Not found');
+            return;
+        }
         var arrays = splitArray(docs);
         res.render('category', {category: arrays })
     });
 }
 
-function splitArray(a) {
-    var i, res = new Array(), parts = new Array();
-    var j = 0;
-    for (i = 0; i < a.length; i++) {
-        if (j == 4) {
-            res.push(parts);
-            parts = [];
-            j = 0;
-        } else {
-            parts.push(a[i]);
-            j++;
-        }
+function splitArray(array) {
+    res = new Array();
+    var i,j,temparray,chunk = 4;
+    for (i=0,j=array.length; i<j; i+=chunk) {
+        temparray = array.slice(i,i+chunk);
+        res.push(temparray);
     }
-    res.push(parts);
     return res;
 }

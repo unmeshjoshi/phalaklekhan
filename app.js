@@ -32,6 +32,10 @@ if (cluster.isMaster) {
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(app.router);
+    app.use(function(req, res, next){
+        res.status(404);
+        res.type('txt').send('Not found');
+    });
     var oneYear = 31557600000;
     app.use(express.static(path.join(__dirname, '/app/public')));
     app.use(express.static(path.join(__dirname, '/app/public/phalaks'), { maxAge: oneYear}));
