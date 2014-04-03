@@ -1,4 +1,5 @@
 var db = require(process.cwd() + '/app/home/db.js')
+var valueLisHandler = require(process.cwd() + '/app/home/ValuelistHandler.js').valueListHandler
 
 var presenter = module.exports;
 
@@ -23,17 +24,7 @@ presenter.show = function (req, res) {
             res.type('txt').send('Not found');
             return;
         }
-        var arrays = splitArray(docs);
+        var arrays = valueLisHandler.split_array(docs, 4);
         res.render('category', {category: arrays })
     });
-}
-
-function splitArray(array) {
-    res = new Array();
-    var i,j,temparray,chunk = 4;
-    for (i=0,j=array.length; i<j; i+=chunk) {
-        temparray = array.slice(i,i+chunk);
-        res.push(temparray);
-    }
-    return res;
 }
