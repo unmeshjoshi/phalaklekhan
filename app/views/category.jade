@@ -7,4 +7,4 @@ block content
                 div(style="margin-top:1%")
                     - each doc in docArray
                         a(href="/phalak/#{doc.name.substring(0, doc.name.indexOf('.'))}", style="margin:0.5%;")
-                            img(src="#{doc.url.replace('upload', 'upload/c_limit,h_308,w_228')}", style="width: 12%;")
+                            img(src="#{doc.url.replace('upload', 'upload/c_limit,h_308,w_228')}", style="width: 12%;", script="onclick: ga('send', 'linkclicked', 'imageinterest', 'click')")
